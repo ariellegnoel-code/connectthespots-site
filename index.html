@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Connect The Spots</title>
+<meta name="description" content="A private, curated community of founders, investors, athletes, brands and changemakers. Founded by Daniel Jeffery.">
+<meta property="og:title" content="Connect The Spots">
+<meta property="og:description" content="Connect people to grow a double bottom line.">
+<meta property="og:image" content="https://connectthespots.co/cts-logo.png">
+<meta property="og:url" content="https://connectthespots.co/">
+<link rel="icon" href="cts-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&family=Tenor+Sans&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Layout: one editorial column on the logo's paper, with ink bands for the moments that carry weight (Daniel, the double bottom line, the doors). Single look by design: the brand is paper, ink and gold. */
+:root {
+  --paper: #f6f3ec;
+  --paper-2: #ece6da;
+  --ink: #141210;
+  --ink-soft: #4a4540;
+  --muted: #847b70;
+  --gold: #a9834f;
+  --gold-soft: #c9a876;
+  --line: #d9d0c1;
+  --title: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --label: "Tenor Sans", "Gill Sans", "Trebuchet MS", sans-serif;
+  --body: "Jost", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  --wrap: 72rem;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-weight: 300; font-size: 1.0625rem; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-inline: clamp(1rem, 4vw, 2.5rem); }
+h1, h2, h3 { font-family: var(--title); font-weight: 700; line-height: 1.08; margin: 0; text-wrap: balance; letter-spacing: -0.005em; }
+h1 em, h2 em, h3 em { font-style: italic; }
+p { margin: 0; max-width: 62ch; }
+.eyebrow { font-family: var(--label); font-size: 0.72rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 0.9rem; }
+.eyebrow::after { content: ""; width: 2.5rem; height: 1px; background: currentColor; opacity: .7; }
+.rule { width: 3.5rem; height: 1px; background: var(--gold); border: 0; margin: 0; }
+section { padding-block: clamp(4rem, 9vw, 7.5rem); }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* draft ribbon */
+.draft { background: var(--ink); color: var(--paper-2); font-family: var(--label); font-size: .68rem; letter-spacing: .24em; text-transform: uppercase; text-align: center; padding: .55rem 1rem; }
+.draft b { color: var(--gold-soft); font-weight: 400; }
+
+/* nav */
+nav.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+nav.top .wrap { display: flex; align-items: center; gap: 2rem; padding-block: .75rem; }
+nav.top .navlinks { margin-left: auto; }
+nav.top .btn { flex: none; }
+@media (max-width: 860px) { nav.top .btn { margin-left: auto; } }
+.brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; }
+.brand { flex: none; }
+.brand img { height: 3.6rem; width: auto; }
+.navlinks { display: flex; gap: 1.6rem; font-family: var(--label); font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; }
+.navlinks a { text-decoration: none; color: var(--ink-soft); }
+.navlinks a:hover { color: var(--gold); }
+.btn { display: inline-flex; align-items: center; gap: .7rem; font-family: var(--label); font-size: .72rem; letter-spacing: .24em; text-transform: uppercase; text-decoration: none; padding: .95rem 1.6rem; border: 1px solid var(--ink); background: var(--ink); color: var(--paper); cursor: pointer; transition: background .25s, color .25s, border-color .25s; }
+.btn:hover { background: var(--gold); border-color: var(--gold); }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn.ghost:hover { color: var(--paper); }
+.btn.small { padding: .65rem 1.1rem; font-size: .66rem; }
+@media (max-width: 860px) { .navlinks { display: none; } }
+
+/* hero */
+.hero { padding-block: clamp(3rem, 7vw, 6rem) clamp(4rem, 8vw, 6.5rem); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 52rem); justify-content: center; text-align: center; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.hero h1 { font-size: clamp(2.79rem, 6.4vw, 5.4rem); margin-block: 1.4rem 1.6rem; }
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero .lede { font-size: 1.15rem; color: var(--ink-soft); }
+.hero .ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: .9rem; margin-top: 2.2rem; }
+.hero .lede, .hero .micro { margin-inline: auto; }
+.hero .eyebrow { justify-content: center; }
+.hero .eyebrow::before { content: ""; width: 2.5rem; height: 1px; background: currentColor; opacity: .7; }
+.hero .micro { margin-top: 1.1rem; font-size: .85rem; color: var(--muted); font-style: italic; font-family: var(--display); font-size: 1.05rem; }
+.portrait { position: relative; min-width: 0; width: min(28rem, calc(100% - 1.1rem)); margin: 2.4rem auto 1.1rem; }
+.portrait img { width: 100%; height: auto; filter: grayscale(1); }
+.portrait::before { content: ""; position: absolute; inset: 1.1rem -1.1rem -1.1rem 1.1rem; border: 1px solid var(--gold); }
+.portrait img { position: relative; }
+.portrait figcaption { margin-top: 1.6rem; font-family: var(--label); font-size: .66rem; letter-spacing: .26em; text-transform: uppercase; color: var(--muted); }
+@media (max-width: 860px) { .portrait { max-width: 26rem; } }
+
+/* idea */
+.idea .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.idea h2 { font-size: clamp(2.6rem, 5.5vw, 4.6rem); }
+.idea h2 em { font-style: italic; color: var(--gold); }
+.idea .body { display: grid; gap: 1.2rem; color: var(--ink-soft); padding-top: .6rem; }
+.idea .close { font-family: var(--display); font-size: 1.5rem; color: var(--ink); font-style: italic; line-height: 1.35; }
+@media (max-width: 760px) { .idea .wrap { grid-template-columns: 1fr; } }
+
+/* ecosystem */
+.eco { background: var(--paper-2); border-block: 1px solid var(--line); }
+.eco h2 { font-size: clamp(2.21rem, 4.4vw, 3.6rem); margin-block: 1.2rem 1rem; }
+.eco .intro { color: var(--ink-soft); }
+.chain { list-style: none; padding: 0; margin: 3.5rem 0 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); position: relative; }
+.chain::before { content: ""; position: absolute; left: 0; right: 0; top: .55rem; height: 1px; background: linear-gradient(90deg, var(--ink) 0 50%, var(--gold) 50% 100%); opacity: .55; }
+.chain li { position: relative; padding-right: 1rem; min-width: 0; }
+.chain .dot { width: 1.1rem; height: 1.1rem; border-radius: 50%; background: var(--ink); display: block; margin-bottom: 1.3rem; position: relative; }
+.chain li:nth-child(n+4) .dot { background: var(--gold); }
+.chain li:nth-child(odd) .dot { transform: scale(.7); }
+.chain h3 { font-size: 1.55rem; margin-bottom: .45rem; }
+.chain p { font-size: .9rem; color: var(--ink-soft); line-height: 1.55; }
+@media (prefers-reduced-motion: no-preference) {
+  .chain .dot { animation: pulse 6s ease-in-out infinite; }
+  .chain li:nth-child(2) .dot { animation-delay: 1s; } .chain li:nth-child(3) .dot { animation-delay: 2s; }
+  .chain li:nth-child(4) .dot { animation-delay: 3s; } .chain li:nth-child(5) .dot { animation-delay: 4s; } .chain li:nth-child(6) .dot { animation-delay: 5s; }
+  @keyframes pulse { 0%, 12%, 100% { box-shadow: 0 0 0 0 transparent; } 6% { box-shadow: 0 0 0 .55rem color-mix(in srgb, var(--gold) 30%, transparent); } }
+}
+@media (max-width: 860px) {
+  .chain { grid-template-columns: 1fr; gap: 1.6rem; }
+  .chain::before { left: .55rem; right: auto; top: 0; bottom: 0; width: 1px; height: auto; background: linear-gradient(180deg, var(--ink) 0 50%, var(--gold) 50% 100%); }
+  .chain li { display: grid; grid-template-columns: 1.1rem 1fr; column-gap: 1.3rem; padding: 0; }
+  .chain .dot { margin: .5rem 0 0; grid-row: span 2; }
+}
+
+/* audiences */
+.aud h2 { font-size: clamp(2.21rem, 4.4vw, 3.6rem); margin-block: 1.2rem 3rem; max-width: 18ch; }
+.aud .cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
+.aud .col { padding: 2rem 2rem 0 0; display: grid; gap: .9rem; align-content: start; min-width: 0; }
+.aud .col + .col { padding-left: 2rem; border-left: 1px solid var(--line); }
+.aud .who { font-family: var(--label); font-size: .7rem; letter-spacing: .26em; text-transform: uppercase; color: var(--gold); }
+.aud h3 { font-size: 1.85rem; }
+.aud p { color: var(--ink-soft); font-size: .98rem; }
+@media (max-width: 860px) { .aud .cols { grid-template-columns: 1fr; } .aud .col, .aud .col + .col { padding: 1.8rem 0; border-left: 0; border-bottom: 1px solid var(--line); } }
+
+/* ink band: Daniel */
+.ink { background: var(--ink); color: var(--paper-2); }
+.ink .eyebrow { color: var(--gold-soft); }
+.daniel .wrap { max-width: 50rem; display: grid; gap: 1.4rem; }
+.daniel h2 { font-size: clamp(2.4rem, 4.6vw, 3.79rem); margin-block: 1.2rem 1rem; color: var(--paper); }
+.daniel .roles { font-family: var(--label); font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: #a79e91; line-height: 2; }
+.daniel .bio { display: grid; gap: 1.2rem; color: #d8d1c5; }
+.daniel blockquote { margin: 2.2rem 0 0; font-family: var(--display); font-style: italic; font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.25; color: var(--gold-soft); border-left: 1px solid var(--gold); padding-left: 1.4rem; }
+
+/* double bottom line */
+.dbl { text-align: center; }
+.dbl .eyebrow { justify-content: center; }
+.dbl .eyebrow::before { content: ""; width: 2.5rem; height: 1px; background: currentColor; opacity: .7; }
+.dbl h2 { font-size: clamp(2.21rem, 4.4vw, 3.6rem); margin-block: 1.2rem 1.2rem; }
+.dbl .intro { margin: 0 auto; color: var(--ink-soft); }
+.needs { list-style: none; padding: 0; margin: 3rem auto; max-width: 46rem; display: grid; gap: .2rem; }
+.needs li { font-family: var(--display); font-size: clamp(1.25rem, 2.3vw, 1.65rem); color: var(--ink-soft); padding-block: .6rem; border-bottom: 1px solid var(--line); }
+.needs li:last-child { border: 0; }
+.equation { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .6rem 1.6rem; font-family: var(--display); font-size: clamp(2.2rem, 6vw, 4.6rem); line-height: 1.1; margin-block: 1rem 1.6rem; }
+.equation .x { color: var(--gold); font-style: italic; font-size: .8em; }
+.dbl .close { margin: 0 auto; font-family: var(--display); font-style: italic; font-size: 1.35rem; color: var(--ink-soft); }
+
+/* network */
+.net { background: var(--paper-2); border-block: 1px solid var(--line); }
+.net h2 { font-size: clamp(2.21rem, 4.4vw, 3.6rem); margin-block: 1.2rem 3rem; }
+.grid6 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.grid6 > div { padding: 1.8rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); min-width: 0; display: grid; gap: .6rem; align-content: start; }
+.grid6 h3 { font-size: 1.6rem; }
+.grid6 p { font-size: .95rem; color: var(--ink-soft); }
+.net .close { margin-top: 3rem; font-family: var(--display); font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.3; font-style: italic; }
+.net .close span { color: var(--gold); }
+@media (max-width: 860px) { .grid6 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .grid6 { grid-template-columns: 1fr; } }
+
+/* vibe */
+.vibe .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.vibe h2 { font-size: clamp(2.79rem, 6vw, 5rem); margin-block: 1.2rem 1.4rem; }
+.vibe h2 em { font-style: italic; color: var(--gold); }
+.vibe .body { display: grid; gap: 1.1rem; color: var(--ink-soft); }
+.qs { list-style: none; padding: 0; margin: 0; counter-reset: q; }
+.qs li { font-family: var(--display); font-size: clamp(1.4rem, 2.6vw, 1.9rem); line-height: 1.3; padding-block: 1rem; border-bottom: 1px solid var(--line); display: flex; gap: 1.2rem; align-items: baseline; }
+.qs li::before { content: ""; flex: none; width: .45rem; height: .45rem; border-radius: 50%; background: var(--gold); transform: translateY(-.2rem); }
+.vibe .after { margin-top: 1.8rem; color: var(--ink-soft); }
+.vibe .after strong { color: var(--ink); font-weight: 500; }
+@media (max-width: 860px) { .vibe .wrap { grid-template-columns: 1fr; } }
+
+/* process */
+.proc h2 { font-size: clamp(2.21rem, 4.4vw, 3.6rem); margin-block: 1.2rem 3rem; }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.4rem; counter-reset: s; }
+.steps li { counter-increment: s; border-top: 1px solid var(--ink); padding-top: 1.2rem; display: grid; gap: .5rem; align-content: start; min-width: 0; }
+.steps li::before { content: "0" counter(s); font-family: var(--label); font-size: .7rem; letter-spacing: .24em; color: var(--gold); }
+.steps h3 { font-size: 1.5rem; }
+.steps p { font-size: .92rem; color: var(--ink-soft); }
+@media (max-width: 860px) { .steps { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }
+
+/* rooms */
+.rooms .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); }
+.rooms h2 { font-size: clamp(2.4rem, 4.79vw, 4rem); margin-block: 1.2rem 1.4rem; color: var(--paper); }
+.rooms .body { display: grid; gap: 1.1rem; color: #d8d1c5; }
+.kinds { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .6rem; }
+.kinds span { font-family: var(--label); font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; border: 1px solid #4d463d; padding: .5rem .85rem; color: var(--paper-2); }
+.nots { list-style: none; padding: 0; margin: 0; display: grid; gap: .2rem; }
+.nots li { font-family: var(--display); font-size: 1.45rem; color: #a79e91; text-decoration: line-through; text-decoration-color: var(--gold); text-decoration-thickness: 1px; padding-block: .4rem; }
+.rooms blockquote { margin: 2rem 0 0; font-family: var(--display); font-style: italic; font-size: clamp(1.6rem, 2.8vw, 2.1rem); line-height: 1.3; color: var(--gold-soft); }
+@media (max-width: 860px) { .rooms .wrap { grid-template-columns: 1fr; } }
+
+/* why */
+.why h2 { font-size: clamp(2.21rem, 4.6vw, 3.79rem); margin-block: 1.2rem 1.4rem; max-width: 20ch; }
+.why h2 em { color: var(--gold); }
+.why .intro { color: var(--ink-soft); }
+.pairs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; margin-top: 3rem; }
+.pairs div { border-top: 1px solid var(--line); padding-top: 1.2rem; min-width: 0; }
+.pairs .no { font-size: .92rem; color: var(--muted); }
+.pairs .yes { font-family: var(--display); font-size: 1.7rem; line-height: 1.2; margin-top: .3rem; }
+@media (max-width: 760px) { .pairs { grid-template-columns: 1fr; gap: 1.4rem; } }
+
+/* doors */
+.doors h2 { font-size: clamp(2.6rem, 5.6vw, 4.79rem); margin-block: 1.2rem 1.2rem; color: var(--paper); }
+.doors h2 em { color: var(--gold-soft); }
+.doors .intro { color: #d8d1c5; }
+.doorgrid { display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); margin-top: 3rem; align-items: start; }
+.panel { border: 1px solid #3d372f; padding: clamp(1.4rem, 3vw, 2.21rem); min-width: 0; }
+.tabs { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.6rem; }
+.tabs button { font-family: var(--label); font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; background: transparent; color: #a79e91; border: 1px solid #3d372f; padding: .6rem .9rem; cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+.form { display: grid; gap: 1rem; }
+.form label { display: grid; gap: .35rem; font-family: var(--label); font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: #a79e91; }
+.form input, .form textarea, .form select { font: inherit; font-size: 1rem; color: var(--paper); background: transparent; border: 0; border-bottom: 1px solid #5a5248; padding: .5rem 0; width: 100%; }
+.form textarea { resize: vertical; min-height: 4.5rem; }
+.form select option { color: var(--ink); }
+.form input:focus, .form textarea:focus, .form select:focus { outline: none; border-bottom-color: var(--gold); }
+.form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form .btn { justify-self: start; background: var(--gold); border-color: var(--gold); color: var(--ink); margin-top: .4rem; }
+.form .btn:hover { background: var(--paper); border-color: var(--paper); }
+.sent { color: var(--gold-soft); font-family: var(--display); font-style: italic; font-size: 1.3rem; }
+@media (max-width: 560px) { .form .row { grid-template-columns: 1fr; } }
+.members h3 { font-size: 1.9rem; color: var(--paper); margin-top: .8rem; }
+.members p { color: #b9b1a4; font-size: .95rem; margin-top: .6rem; }
+.members ul { list-style: none; padding: 0; margin: 1.4rem 0 0; display: grid; gap: 0; }
+.members li { display: flex; justify-content: space-between; gap: 1rem; padding-block: .75rem; border-bottom: 1px solid #3d372f; font-size: .95rem; color: var(--paper-2); }
+.members li span { font-family: var(--label); font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-soft); white-space: nowrap; }
+.members .lock { font-family: var(--label); font-size: .64rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-soft); }
+@media (max-width: 860px) { .doorgrid { grid-template-columns: 1fr; } }
+
+/* footer */
+footer { padding-block: 4rem 3rem; }
+footer .wrap { display: grid; justify-items: center; text-align: center; gap: 1.4rem; }
+footer img { width: 9rem; height: auto; }
+footer .tag { font-family: var(--label); font-size: .7rem; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-soft); line-height: 2.1; }
+footer .contact { text-align: center; font-size: .92rem; color: var(--ink-soft); }
+footer .contact b { display: block; font-weight: 400; color: var(--ink); user-select: all; }
+</style>
+</head>
+<body>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="cts-logo.png" alt="Connect The Spots" width="850" height="419"></a>
+    <div class="navlinks"><a href="#idea">The idea</a><a href="#daniel">Daniel</a><a href="#network">Network</a><a href="#rooms">Rooms</a><a href="#begin">Begin</a></div>
+    <a class="btn small" href="#begin">Book a Conversation</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Culture Through Community</div>
+      <h1>Connect people to grow a <em>double bottom line.</em></h1>
+      <p class="lede">A private, curated community of founders, investors, athletes, brands and changemakers. Connect The Spots brings the right people into the right conversations, so relationships can grow businesses, unlock opportunities and create meaningful impact.</p>
+      <div class="ctas">
+        <a class="btn" href="#begin">Book a Conversation <span aria-hidden="true">&rarr;</span></a>
+        <a class="btn ghost" href="#begin" data-door="invite">Request an invitation</a>
+      </div>
+      <p class="micro">Start with a conversation. See where the connection leads.</p>
+    </div>
+  </div>
+</header>
+
+<section class="idea" id="idea">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">The idea</div>
+      <h2 style="margin-top:1.2rem">We don't network.<br><em>We connect.</em></h2>
+    </div>
+    <div class="body">
+      <p>The most valuable opportunities rarely begin with a transaction. They begin with a person. A conversation. A shared interest. A problem someone else can solve. An introduction neither person knew they needed.</p>
+      <p>Connect The Spots brings exceptional people together across entrepreneurship, investment, sport, wellness, entertainment, philanthropy and culture. Not to build the biggest network. To build the right relationships.</p>
+      <p class="close">Good business. Meaningful good. That's the double bottom line.</p>
+    </div>
+  </div>
+</section>
+
+<section class="eco" aria-labelledby="eco-h">
+  <div class="wrap">
+    <div class="eyebrow">How a connection moves</div>
+    <h2 id="eco-h">An ecosystem, not a directory.</h2>
+    <p class="intro">Every introduction starts with a person and ends with something real. This is the path each one takes.</p>
+    <ol class="chain">
+      <li><i class="dot"></i><div><h3>People</h3><p>Who you are, beyond the title.</p></div></li>
+      <li><i class="dot"></i><div><h3>Interests</h3><p>What you care about and where you're going.</p></div></li>
+      <li><i class="dot"></i><div><h3>Needs</h3><p>Capital, a partner, a room, a perspective.</p></div></li>
+      <li><i class="dot"></i><div><h3>Introductions</h3><p>The right person, made with context.</p></div></li>
+      <li><i class="dot"></i><div><h3>Opportunities</h3><p>A deal, a partnership, a cause worth backing.</p></div></li>
+      <li><i class="dot"></i><div><h3>Outcomes</h3><p>Economic value, human impact, or both.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="aud" aria-labelledby="aud-h">
+  <div class="wrap">
+    <div class="eyebrow">Who it's for</div>
+    <h2 id="aud-h">Three seats at the same table.</h2>
+    <div class="cols">
+      <div class="col">
+        <div class="who">Principals &amp; family offices</div>
+        <h3>Trusted access, without the noise.</h3>
+        <p>Differentiated opportunities and relationships that come with context, vetted by someone who knows both sides of the introduction.</p>
+      </div>
+      <div class="col">
+        <div class="who">Founders &amp; CEOs</div>
+        <h3>The person who changes the equation.</h3>
+        <p>Capital, strategic partners, advisors and operators. Introductions built around what you're building and what's in the way.</p>
+      </div>
+      <div class="col">
+        <div class="who">Brands &amp; enterprises</div>
+        <h3>Authentic access to influential communities.</h3>
+        <p>Strategic relationships with athletes, entertainers, founders and leaders, in rooms built for real conversation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ink daniel" id="daniel" aria-labelledby="daniel-h">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">The connector</div>
+      <h2 id="daniel-h">Meet Daniel Jeffery.</h2>
+      <div class="roles">Founder, Connect The Spots<br>Entrepreneur<br>Community Builder<br>Mental Health Advocate</div>
+    </div>
+    <div>
+      <div class="bio">
+        <p>Daniel Jeffery is an entrepreneur, connector and community builder who believes the most meaningful opportunities in life and business begin with genuine human connection.</p>
+        <p>His mission extends beyond business. Daniel is passionate about mental health advocacy and breaking the stigma around vulnerability, particularly among entrepreneurs, leaders, athletes and men who often feel pressure to carry everything themselves. He believes some of the most important conversations happen when we're willing to take off the armor, acknowledge we don't have all the answers, and create space for people to be honest about what they're going through.</p>
+        <p>His own journey has reinforced a simple belief: strength isn't always about having it together. Sometimes strength is having the courage to ask for help, be vulnerable, and choose growth.</p>
+        <p>That philosophy is woven into everything he builds. Through curated experiences (private dinners, golf, wellness, travel, philanthropy and intimate conversation), Daniel creates environments where people connect beyond titles and transactions. Because behind every founder is a person. Behind every athlete is a human being. Behind every leader is a story. And sometimes the right conversation, at the right moment, changes everything.</p>
+      </div>
+      <blockquote>The common thread is connection.</blockquote>
+      <figure class="portrait">
+        <img src="daniel-wedding.webp" alt="Daniel Jeffery in a white collared shirt and vest, adjusting his tie" width="900" height="1200">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="dbl" aria-labelledby="dbl-h">
+  <div class="wrap">
+    <div class="eyebrow">Profit &times; Impact</div>
+    <h2 id="dbl-h">Business can grow more than business.</h2>
+    <p class="intro">The strongest relationships create value on more than one level.</p>
+    <ul class="needs">
+      <li>A founder needs capital.</li>
+      <li>An investor needs the right opportunity.</li>
+      <li>A company needs a strategic relationship.</li>
+      <li>A philanthropist wants resources to create meaningful change.</li>
+      <li>A leader needs someone who can change the trajectory.</li>
+    </ul>
+    <p class="intro" style="margin-bottom:1.4rem">Connect The Spots lives at the intersection.</p>
+    <div class="equation"><span>Economic Value</span><span class="x">&times;</span><span>Human Impact</span></div>
+    <p class="close">The best opportunities create value for the people at the table, and beyond it.</p>
+  </div>
+</section>
+
+<section class="net" id="network" aria-labelledby="net-h">
+  <div class="wrap">
+    <div class="eyebrow">The network</div>
+    <h2 id="net-h">The people behind the opportunities.</h2>
+    <div class="grid6">
+      <div><h3>Founders + Operators</h3><p>Building companies, platforms and ideas.</p></div>
+      <div><h3>Investors + Family Offices</h3><p>Looking for differentiated opportunities, trusted relationships and impact.</p></div>
+      <div><h3>Athletes + Entertainers</h3><p>Building businesses, brands, investments and legacy beyond their primary careers.</p></div>
+      <div><h3>Brands + Corporations</h3><p>Seeking authentic access to influential communities and strategic relationships.</p></div>
+      <div><h3>Advisors + Experts</h3><p>From wealth management and investment banking to healthcare, real estate, legal and longevity.</p></div>
+      <div><h3>Philanthropists + Changemakers</h3><p>Using capital, influence and relationships to create meaningful change.</p></div>
+    </div>
+    <p class="close">You know people we don't. We know people you don't. <span>Let's connect the spots.</span></p>
+  </div>
+</section>
+
+<section class="vibe" aria-labelledby="vibe-h">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Where it begins</div>
+      <h2 id="vibe-h">It begins with <em>a conversation.</em></h2>
+      <div class="body">
+        <p>Before the introduction, the dinner, the investment or the partnership comes something simpler: a conversation.</p>
+        <p>The first call is about understanding you, not pitching you.</p>
+      </div>
+      <p class="after"><strong>No pitch. No obligation.</strong> Just a conversation to understand where you are, and whether there are dots worth connecting.</p>
+      <div style="margin-top:2rem"><a class="btn" href="#begin">Book your first conversation <span aria-hidden="true">&rarr;</span></a></div>
+    </div>
+    <ul class="qs" aria-label="What we'll talk about">
+      <li>What are you building?</li>
+      <li>Where are you going?</li>
+      <li>What's standing in the way?</li>
+      <li>Who would materially change the equation?</li>
+      <li>What kind of impact matters to you?</li>
+    </ul>
+  </div>
+</section>
+
+<section class="proc" aria-labelledby="proc-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">The process</div>
+    <h2 id="proc-h">One conversation can create the next five.</h2>
+    <ol class="steps">
+      <li><h3>Discover</h3><p>Understand the person, opportunity and objective.</p></li>
+      <li><h3>Connect</h3><p>Identify the people, capital, resources or relationships that matter.</p></li>
+      <li><h3>Facilitate</h3><p>Create the right introduction, room or conversation.</p></li>
+      <li><h3>Activate</h3><p>Move beyond the introduction toward something tangible.</p></li>
+      <li><h3>Grow</h3><p>Create economic value, meaningful impact, or both.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="ink rooms" id="rooms" aria-labelledby="rooms-h">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">The rooms</div>
+      <h2 id="rooms-h">Some connections need a room.</h2>
+      <div class="body">
+        <p>Not every relationship begins through email or LinkedIn. Sometimes the environment changes everything. Connect The Spots creates intimate experiences designed to remove the usual barriers between people.</p>
+        <div class="kinds"><span>Private dinners</span><span>Golf</span><span>Wellness</span><span>Travel</span><span>Philanthropy</span><span>Intimate conversation</span></div>
+      </div>
+    </div>
+    <div>
+      <ul class="nots" aria-label="What the rooms are not">
+        <li>Crowded conference halls</li>
+        <li>Endless panels</li>
+        <li>Business cards from people you'll never speak to again</li>
+      </ul>
+      <p style="color:#d8d1c5;margin-top:1.2rem">Just carefully considered people, shared experiences and enough space for a real relationship to begin.</p>
+      <blockquote>What happens after the room matters more than what happens inside it.</blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="why" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="eyebrow">Why Connect The Spots</div>
+    <h2 id="why-h">The world doesn't have a connection problem. It has a <em>right connection</em> problem.</h2>
+    <p class="intro">There are more ways to meet people than ever. Finding someone you trust, who understands what you're building and knows who could materially change the equation, is still remarkably difficult. Connect The Spots is built around discernment, not volume.</p>
+    <div class="pairs">
+      <div><div class="no">Not the biggest network.</div><div class="yes">The right relationships.</div></div>
+      <div><div class="no">Not the most introductions.</div><div class="yes">The right introductions.</div></div>
+      <div><div class="no">Not opportunity for its own sake.</div><div class="yes">Opportunity with purpose.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="ink doors" id="begin" aria-labelledby="doors-h">
+  <div class="wrap">
+    <div class="eyebrow">Begin</div>
+    <h2 id="doors-h">Let's see where the <em>dots connect.</em></h2>
+    <p class="intro">Tell Daniel what you're building, what you're looking for, what you're trying to change, and who you may need along the way. You don't need to know exactly where it leads. That's the point.</p>
+    <div class="doorgrid">
+      <div class="panel">
+        <div class="tabs" role="tablist" aria-label="Ways in">
+          <button role="tab" id="t-vibe" aria-selected="true" data-door="vibe">Book a Conversation</button>
+          <button role="tab" id="t-invite" aria-selected="false" data-door="invite">Request an invitation</button>
+          <button role="tab" id="t-refer" aria-selected="false" data-door="refer">Refer someone</button>
+          <button role="tab" id="t-partner" aria-selected="false" data-door="partner">Partner with CTS</button>
+        </div>
+        <form class="form" id="door-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="door" id="f-door" value="Book a Conversation">
+          <p hidden><label>Leave this empty<input name="bot-field"></label></p>
+          <p id="door-lede" style="color:#d8d1c5">Your first conversation with Daniel. Thirty minutes, no pitch.</p>
+          <div class="row">
+            <label for="f-name">Your name<input id="f-name" name="name" autocomplete="name" required></label>
+            <label for="f-email">Email<input id="f-email" name="email" type="email" autocomplete="email" required></label>
+          </div>
+          <label for="f-ref" id="f-ref-wrap" hidden>Who belongs in this room?<input id="f-ref" name="referral" placeholder="Their name and why"></label>
+          <label for="f-role">You are a<select id="f-role" name="role">
+            <option>Founder or operator</option><option>Investor or family office</option><option>Athlete or entertainer</option><option>Brand or corporation</option><option>Advisor or expert</option><option>Philanthropist or changemaker</option>
+          </select></label>
+          <label for="f-note" id="f-note-label">What are you building?<textarea id="f-note" name="message"></textarea></label>
+          <button class="btn" type="submit" id="door-submit">Book a Conversation &rarr;</button>
+          <p class="sent" id="door-sent" hidden>Thank you. Daniel will be in touch personally.</p>
+          <p class="sent" id="door-err" hidden>That did not go through. Please try again in a moment.</p>
+        </form>
+      </div>
+      <aside class="panel members" aria-labelledby="mem-h">
+        <div class="lock">Members &middot; by invitation</div>
+        <h3 id="mem-h">Inside the community</h3>
+        <p>Once you're in, the private side of Connect The Spots is where the work happens.</p>
+        <ul>
+          <li>Member profiles <span>Phase 2</span></li>
+          <li>Introduction requests <span>Phase 2</span></li>
+          <li>Opportunities <span>Phase 2</span></li>
+          <li>Events &amp; rooms <span>Phase 2</span></li>
+          <li>Concierge requests <span>Phase 2</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="cts-logo.png" alt="" width="850" height="419">
+    <div class="tag">Connect The Spots<br>Culture Through Community &middot; Profit &times; Impact</div>
+    <div class="contact"><b>connectthespots.co</b></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var doors = {
+    vibe:    { lede: "Your first conversation with Daniel. Thirty minutes, no pitch.", note: "What are you building?", btn: "Book a Conversation →", ref: false },
+    invite:  { lede: "Connect The Spots is curated. Tell us a little about you and we'll follow up personally.", note: "What would you bring to the room?", btn: "Request an invitation →", ref: false },
+    refer:   { lede: "Know someone who belongs in this room? Introduce them to Daniel.", note: "How do you know them?", btn: "Send the referral →", ref: true },
+    partner: { lede: "For brands, venues and organizations who want to build something with the community.", note: "What would you like to create together?", btn: "Start a partnership conversation →", ref: false }
+  };
+  var tabs = document.querySelectorAll('.tabs button');
+  function pick(key) {
+    var d = doors[key]; if (!d) return;
+    tabs.forEach(function (t) { t.setAttribute('aria-selected', t.dataset.door === key ? 'true' : 'false'); });
+    document.getElementById('door-lede').textContent = d.lede;
+    document.getElementById('f-note-label').firstChild.textContent = d.note;
+    document.getElementById('door-submit').textContent = d.btn;
+    document.getElementById('f-ref-wrap').hidden = !d.ref;
+    document.getElementById('door-sent').hidden = true;
+    document.getElementById('f-door').value = tabs.length && document.querySelector('.tabs button[data-door="' + key + '"]').textContent;
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { pick(t.dataset.door); }); });
+  document.querySelectorAll('a[data-door]').forEach(function (a) { a.addEventListener('click', function () { pick(a.dataset.door); }); });
+  var form = document.getElementById('door-form');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = document.getElementById('door-submit');
+    btn.disabled = true;
+    document.getElementById('door-err').hidden = true;
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); form.reset(); document.getElementById('door-sent').hidden = false; })
+      .catch(function () { document.getElementById('door-err').hidden = false; })
+      .then(function () { btn.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>
