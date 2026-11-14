@@ -3,12 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Connect The Spots</title>
+<title>Connect The Spots · Private Community of Founders, Investors and Athletes</title>
 <meta name="description" content="A private, curated community of founders, investors, athletes, brands and changemakers. Founded by Daniel Jeffery.">
 <meta property="og:title" content="Connect The Spots">
 <meta property="og:description" content="Connect people to grow a double bottom line.">
 <meta property="og:image" content="https://connectthespots.co/cts-logo.png">
 <meta property="og:url" content="https://connectthespots.co/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Connect The Spots">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Connect The Spots">
+<meta name="twitter:description" content="Connect people to grow a double bottom line.">
+<meta name="twitter:image" content="https://connectthespots.co/cts-logo.png">
+<link rel="canonical" href="https://connectthespots.co/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Connect The Spots",
+  "url": "https://connectthespots.co/",
+  "logo": "https://connectthespots.co/cts-logo.png",
+  "description": "A private, curated community of founders, investors, athletes, brands and changemakers.",
+  "email": "danieljefferycts@gmail.com",
+  "founder": { "@type": "Person", "name": "Daniel Jeffery" }
+}
+</script>
 <link rel="icon" href="cts-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -236,6 +255,13 @@ nav.top .btn { flex: none; }
 .members .lock { font-family: var(--label); font-size: .64rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-soft); }
 @media (max-width: 860px) { .doorgrid { grid-template-columns: 1fr; } }
 
+.emailpanel { display: grid; gap: 1.4rem; align-content: start; }
+.doorbtns { display: grid; gap: .8rem; }
+.doorbtns .btn { justify-content: space-between; background: transparent; border-color: #5a5248; color: var(--paper); }
+.doorbtns .btn:first-child { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+.doorbtns .btn:hover { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+.direct { color: #a79e91; font-size: .95rem; }
+.direct b { display: block; font-weight: 400; color: var(--paper); user-select: all; margin-top: .2rem; }
 /* footer */
 footer { padding-block: 4rem 3rem; }
 footer .wrap { display: grid; justify-items: center; text-align: center; gap: 1.4rem; }
@@ -251,7 +277,7 @@ footer .contact b { display: block; font-weight: 400; color: var(--ink); user-se
   <div class="wrap">
     <a class="brand" href="#top"><img src="cts-logo.png" alt="Connect The Spots" width="850" height="419"></a>
     <div class="navlinks"><a href="#idea">The idea</a><a href="#daniel">Daniel</a><a href="#network">Network</a><a href="#rooms">Rooms</a><a href="#begin">Begin</a></div>
-    <a class="btn small" href="#begin">Book a Conversation</a>
+    <a class="btn small" href="mailto:danieljefferycts@gmail.com?subject=Book%20a%20Conversation">Book a Conversation</a>
   </div>
 </nav>
 
@@ -262,8 +288,8 @@ footer .contact b { display: block; font-weight: 400; color: var(--ink); user-se
       <h1>Connect people to grow a <em>double bottom line.</em></h1>
       <p class="lede">A private, curated community of founders, investors, athletes, brands and changemakers. Connect The Spots brings the right people into the right conversations, so relationships can grow businesses, unlock opportunities and create meaningful impact.</p>
       <div class="ctas">
-        <a class="btn" href="#begin">Book a Conversation <span aria-hidden="true">&rarr;</span></a>
-        <a class="btn ghost" href="#begin" data-door="invite">Request an invitation</a>
+        <a class="btn" href="mailto:danieljefferycts@gmail.com?subject=Book%20a%20Conversation">Book a Conversation <span aria-hidden="true">&rarr;</span></a>
+        <a class="btn ghost" href="mailto:danieljefferycts@gmail.com?subject=Request%20an%20Invitation">Request an invitation</a>
       </div>
       <p class="micro">Start with a conversation. See where the connection leads.</p>
     </div>
@@ -334,7 +360,7 @@ footer .contact b { display: block; font-weight: 400; color: var(--ink); user-se
     <div>
       <div class="bio">
         <p>Daniel Jeffery is an entrepreneur, connector and community builder who believes the most meaningful opportunities in life and business begin with genuine human connection.</p>
-        <p>His mission extends beyond business. Daniel is passionate about mental health advocacy and breaking the stigma around vulnerability, particularly among entrepreneurs, leaders, athletes and men who often feel pressure to carry everything themselves. He believes some of the most important conversations happen when we're willing to take off the armor, acknowledge we don't have all the answers, and create space for people to be honest about what they're going through.</p>
+        <p>His mission extends beyond business. Daniel is passionate about mental health advocacy and breaking the stigma around vulnerability, particularly among entrepreneurs, leaders and athletes who often feel pressure to carry everything themselves. He believes some of the most important conversations happen when we're willing to take off the armor, acknowledge we don't have all the answers, and create space for people to be honest about what they're going through.</p>
         <p>His own journey has reinforced a simple belief: strength isn't always about having it together. Sometimes strength is having the courage to ask for help, be vulnerable, and choose growth.</p>
         <p>That philosophy is woven into everything he builds. Through curated experiences (private dinners, golf, wellness, travel, philanthropy and intimate conversation), Daniel creates environments where people connect beyond titles and transactions. Because behind every founder is a person. Behind every athlete is a human being. Behind every leader is a story. And sometimes the right conversation, at the right moment, changes everything.</p>
       </div>
@@ -390,7 +416,7 @@ footer .contact b { display: block; font-weight: 400; color: var(--ink); user-se
         <p>The first call is about understanding you, not pitching you.</p>
       </div>
       <p class="after"><strong>No pitch. No obligation.</strong> Just a conversation to understand where you are, and whether there are dots worth connecting.</p>
-      <div style="margin-top:2rem"><a class="btn" href="#begin">Book your first conversation <span aria-hidden="true">&rarr;</span></a></div>
+      <div style="margin-top:2rem"><a class="btn" href="mailto:danieljefferycts@gmail.com?subject=Book%20a%20Conversation">Book your first conversation <span aria-hidden="true">&rarr;</span></a></div>
     </div>
     <ul class="qs" aria-label="What we'll talk about">
       <li>What are you building?</li>
@@ -457,31 +483,15 @@ footer .contact b { display: block; font-weight: 400; color: var(--ink); user-se
     <h2 id="doors-h">Let's see where the <em>dots connect.</em></h2>
     <p class="intro">Tell Daniel what you're building, what you're looking for, what you're trying to change, and who you may need along the way. You don't need to know exactly where it leads. That's the point.</p>
     <div class="doorgrid">
-      <div class="panel">
-        <div class="tabs" role="tablist" aria-label="Ways in">
-          <button role="tab" id="t-vibe" aria-selected="true" data-door="vibe">Book a Conversation</button>
-          <button role="tab" id="t-invite" aria-selected="false" data-door="invite">Request an invitation</button>
-          <button role="tab" id="t-refer" aria-selected="false" data-door="refer">Refer someone</button>
-          <button role="tab" id="t-partner" aria-selected="false" data-door="partner">Partner with CTS</button>
+      <div class="panel emailpanel">
+        <p style="color:#d8d1c5">Every conversation starts with a note to Daniel.</p>
+        <div class="doorbtns">
+          <a class="btn" href="mailto:danieljefferycts@gmail.com?subject=Book%20a%20Conversation">Book a Conversation &rarr;</a>
+          <a class="btn" href="mailto:danieljefferycts@gmail.com?subject=Request%20an%20Invitation">Request an invitation &rarr;</a>
+          <a class="btn" href="mailto:danieljefferycts@gmail.com?subject=Referral">Refer someone &rarr;</a>
+          <a class="btn" href="mailto:danieljefferycts@gmail.com?subject=Partner%20with%20Connect%20The%20Spots">Partner with CTS &rarr;</a>
         </div>
-        <form class="form" id="door-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact">
-          <input type="hidden" name="door" id="f-door" value="Book a Conversation">
-          <p hidden><label>Leave this empty<input name="bot-field"></label></p>
-          <p id="door-lede" style="color:#d8d1c5">Your first conversation with Daniel. Thirty minutes, no pitch.</p>
-          <div class="row">
-            <label for="f-name">Your name<input id="f-name" name="name" autocomplete="name" required></label>
-            <label for="f-email">Email<input id="f-email" name="email" type="email" autocomplete="email" required></label>
-          </div>
-          <label for="f-ref" id="f-ref-wrap" hidden>Who belongs in this room?<input id="f-ref" name="referral" placeholder="Their name and why"></label>
-          <label for="f-role">You are a<select id="f-role" name="role">
-            <option>Founder or operator</option><option>Investor or family office</option><option>Athlete or entertainer</option><option>Brand or corporation</option><option>Advisor or expert</option><option>Philanthropist or changemaker</option>
-          </select></label>
-          <label for="f-note" id="f-note-label">What are you building?<textarea id="f-note" name="message"></textarea></label>
-          <button class="btn" type="submit" id="door-submit">Book a Conversation &rarr;</button>
-          <p class="sent" id="door-sent" hidden>Thank you. Daniel will be in touch personally.</p>
-          <p class="sent" id="door-err" hidden>That did not go through. Please try again in a moment.</p>
-        </form>
+        <p class="direct">Or write to Daniel directly<br><b>danieljefferycts@gmail.com</b></p>
       </div>
       <aside class="panel members" aria-labelledby="mem-h">
         <div class="lock">Members &middot; by invitation</div>
@@ -503,43 +513,9 @@ footer .contact b { display: block; font-weight: 400; color: var(--ink); user-se
   <div class="wrap">
     <img src="cts-logo.png" alt="" width="850" height="419">
     <div class="tag">Connect The Spots<br>Culture Through Community &middot; Profit &times; Impact</div>
-    <div class="contact"><b>connectthespots.co</b></div>
+    <div class="contact"><b>danieljefferycts@gmail.com</b>connectthespots.co</div>
   </div>
 </footer>
 
-<script>
-(function () {
-  var doors = {
-    vibe:    { lede: "Your first conversation with Daniel. Thirty minutes, no pitch.", note: "What are you building?", btn: "Book a Conversation →", ref: false },
-    invite:  { lede: "Connect The Spots is curated. Tell us a little about you and we'll follow up personally.", note: "What would you bring to the room?", btn: "Request an invitation →", ref: false },
-    refer:   { lede: "Know someone who belongs in this room? Introduce them to Daniel.", note: "How do you know them?", btn: "Send the referral →", ref: true },
-    partner: { lede: "For brands, venues and organizations who want to build something with the community.", note: "What would you like to create together?", btn: "Start a partnership conversation →", ref: false }
-  };
-  var tabs = document.querySelectorAll('.tabs button');
-  function pick(key) {
-    var d = doors[key]; if (!d) return;
-    tabs.forEach(function (t) { t.setAttribute('aria-selected', t.dataset.door === key ? 'true' : 'false'); });
-    document.getElementById('door-lede').textContent = d.lede;
-    document.getElementById('f-note-label').firstChild.textContent = d.note;
-    document.getElementById('door-submit').textContent = d.btn;
-    document.getElementById('f-ref-wrap').hidden = !d.ref;
-    document.getElementById('door-sent').hidden = true;
-    document.getElementById('f-door').value = tabs.length && document.querySelector('.tabs button[data-door="' + key + '"]').textContent;
-  }
-  tabs.forEach(function (t) { t.addEventListener('click', function () { pick(t.dataset.door); }); });
-  document.querySelectorAll('a[data-door]').forEach(function (a) { a.addEventListener('click', function () { pick(a.dataset.door); }); });
-  var form = document.getElementById('door-form');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var btn = document.getElementById('door-submit');
-    btn.disabled = true;
-    document.getElementById('door-err').hidden = true;
-    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); form.reset(); document.getElementById('door-sent').hidden = false; })
-      .catch(function () { document.getElementById('door-err').hidden = false; })
-      .then(function () { btn.disabled = false; });
-  });
-})();
-</script>
 </body>
 </html>
